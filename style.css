@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #1A1A1A;
+    background: #E5E5E5;
+}
+
+header {
+    position: relative;
+    border: 1px solid green;
+    width: 100%;
+    height: 3.5rem;
+}
+
+.nav-button {
+    position: absolute;
+    top: 1.75rem;
+    right: 2rem;
+    transform: translate(0, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    width: 1.5rem;
+    cursor: pointer;
+}
+
+.nav-button > * {
+    border: 1.45px solid black;
+    transition: all 300ms ease-in-out;
+}
+
+.cross > *:nth-child(1) {
+    transform: translate(0, 0.53rem) rotate(-45deg);
+}
+
+.cross > *:nth-child(3) {
+    transform: translate(0, -0.4rem) rotate(45deg);
+}
+
+.cross > *:nth-child(2) {
+    opacity: 0;
+}
+
+nav {
+    position: fixed;
+    top: 3.5rem;
+    left: 100%;
+    width: 100%;
+    border: 1px solid red;    
+    height: 100vh;
+    transition: left 300ms ease-in-out;
+}
+
+.hide-nav {
+    left: 0%;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    list-style-type: none;
+    font-size: 1.5rem;
+}
+
+nav ul li {
+    width: 100%;
+}
+
+nav ul a {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    padding: 1.7rem;
+    text-decoration: none;
+    color: #000000;
+}
+
+nav ul li:hover {
+    background: #D9D9D9;
+}
