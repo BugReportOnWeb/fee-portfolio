@@ -48,6 +48,10 @@ header h1 a {
     cursor: pointer;
 }
 
+.theme-button-inside {
+    display: none;
+}
+
 .nav-button {
     position: absolute;
     top: 1.75rem;
@@ -126,3 +130,98 @@ nav ul li .dark-theme-link:hover {
     background: #252525;
 }
 
+@media screen and (min-width: 520px) {
+    .nav-button {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+    }
+
+    header h1 {
+        height: fit-content;
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    header h1 a {
+        position: static;
+        transform: translate(0, 0);
+    }
+
+    .theme-button {
+        display: none;
+    }
+
+    .theme-button-inside {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+        width: fit-content;
+    }
+
+    nav {
+        position: static;
+        display: block;
+        width: fit-content;
+        height: 3.5rem;
+        display: flex;
+        align-items: center;
+        margin-left: 0.5rem;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 0.8rem;
+        font-size: 1rem;
+        margin-left: 1rem;
+    }
+
+    nav ul li {
+        width: fit-content;
+        border-radius: 0;
+    }
+
+    nav ul a {
+        display: block;
+        width: fit-content;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    nav ul li a:hover,
+    nav ul li .dark-theme-link:hover {
+        background: transparent;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    nav ul {
+        gap: 2rem;
+        margin-left: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    header {
+        padding: 0 5rem;
+    }
+}
+
+@media screen and (min-width: 930px) {
+    nav ul {
+        margin-left: 2rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    header {
+        padding: 0 10rem;
+    }
+}
