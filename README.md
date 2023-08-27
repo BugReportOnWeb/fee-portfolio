@@ -24,13 +24,13 @@ You can access the live demo of the portfolio site at [https://fee-portfolio.ver
 1. Clone the repository:
 
 ```bash
-$ git clone https://github.com/BugReportOnWeb/fee_portfolio.git
+$ git clone https://github.com/BugReportOnWeb/fee-portfolio.git
 ```
 
 2. Navigate to the project directory:
 
 ```bash
-$ cd fee_portfolio
+$ cd fee-portfolio
 ```
 
 3. Open the `index.html` file in your web browser to view the portfolio site locally.
