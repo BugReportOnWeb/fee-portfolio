@@ -22,15 +22,21 @@ body {
 }
 
 header {
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100%;
-    height: 3.5rem;
+    height: 5rem;
+    background: #E5E5E5;
+    z-index: 10;
+}
+
+.dark-theme-header {
+    background: #1A1A1A;
 }
 
 header h1 a {
     position: absolute;
-    top: 1.75rem;
+    top: 2.5rem;
     left: 2rem;
     transform: translate(0, -50%);
     font-weight: 550;
@@ -54,7 +60,7 @@ header h1 a {
 
 .nav-button {
     position: absolute;
-    top: 1.75rem;
+    top: 2.5rem;
     right: 2rem;
     transform: translate(0, -50%);
     display: flex;
@@ -87,11 +93,12 @@ header h1 a {
 
 nav {
     position: fixed;
-    top: 3.5rem;
+    top: 5rem;
     left: 100%;
     width: 100%;
     height: 100vh;
     transition: left 300ms ease-in-out;
+    z-index: 10;
 }
 
 .hide-nav {
@@ -119,15 +126,68 @@ nav ul a {
     padding: 1.7rem;
     text-decoration: none;
     color: #1A1A1A;
-    border-radius: 10px;
 }
 
 nav ul li a:hover {
-    background: #D9D9D9;
+    background: rgba(217, 217, 218, 0.8);
 }
 
 nav ul li .dark-theme-link:hover {
-    background: #252525;
+    background: rgba(37, 37, 37, 0.8);
+}
+
+section {
+    transition: opacity 300ms ease-in-out;
+}
+
+.section-opacity {
+    opacity: 0.05;
+}
+
+.hero {
+    height: 100vh;
+    padding: 10rem 2rem 5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-wrapper {
+    width: 55rem;
+    padding: 2rem;
+    gap: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    text-align: center;
+}
+
+.hero-description {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.hero-description h1 {
+    font-size: 3rem;
+}
+
+.hero-description p {
+    line-height: 1.7rem;
+}
+
+.hero-wrapper img {
+    width: 11rem;
+    border-radius: 20px;
+    padding: 0.3rem;
+    border: 2px solid #1A1A1A;
+}
+
+.hero-wrapper .dark-theme-image {
+    border: 2px solid #E5E5E5;
 }
 
 @media screen and (min-width: 520px) {
@@ -205,6 +265,19 @@ nav ul li .dark-theme-link:hover {
     nav ul {
         gap: 2rem;
         margin-left: 1.5rem;
+    }
+
+    .hero {
+        padding: 5rem 2rem;
+    }
+
+    .hero-wrapper {
+        flex-direction: row;
+        text-align: start;
+    }
+
+    .hero-wrapper img {
+        width: 17rem;
     }
 }
 
