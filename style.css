@@ -250,6 +250,8 @@ section {
 
 .project-wrapper {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     flex-direction: column;
     gap: 2rem;
 }
@@ -258,7 +260,7 @@ section {
     border: 1px solid #CCCCCC;
     padding: 2rem;
     border-radius: 20px;
-    width: 21.87rem;
+    width: 20rem;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 
     display: flex;
@@ -295,13 +297,128 @@ section {
     font-size: 0.9rem;
     font-weight: 450;
     padding: 0.8rem 1.2rem;
-    border: 1px solid #E5E5E5;
+    border: 1px solid #CCCCCC;
     border-radius: 10px;
     background: #ECECEC;
 }
 
 .dark-theme-project-card div p {
     border: 1px solid #1A1A1A;
+    background: #252525;
+}
+
+.contact {
+    height: 100vh;
+    margin: 0 2rem 5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-contect: center;
+    gap: 3rem;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-links-wrapper {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.contact-links-wrapper div {
+    padding: 1rem 1.5rem;
+    border: 1px solid #CCCCCC;
+    border-radius: 10px;
+    transition: background 300ms;
+    cursor: pointer;
+    text-align: center;
+}
+
+.contact-links-wrapper div:hover {
+    background: #D8D8D8;
+}
+
+.dark-theme-contact-links-wrapper div:hover {
+    background: #252525;
+}
+
+.personal-email {
+    text-decoration: underline;
+}
+
+.personal-email a {
+    color: #1A1A1A;
+}
+
+.dark-theme-email a {
+    color: #E5E5E5;
+}
+
+.or {
+    position: relative;
+    height: 2rem;
+    width: 2rem;
+    padding: 1rem;
+    border-radius: 100%;
+    font-size: 0.75rem;
+    border: 1px solid #AAAAAA;
+}
+
+.or p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+form {
+    background: #E5E5E5;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+form > * {
+    padding: 1rem 1.3rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    outline: none;
+    background: #E5E5E5;
+    border: 1px solid #AAAAAA;
+    font-size: 0.9rem;
+}
+
+form button {
+    width: 70%;
+    margin: 0 auto;
+    transition: background 300ms;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+form button:hover {
+    background: #D8D8D8;
+}
+
+.dark-theme-form,
+.dark-theme-form > * {
+    background: #1A1A1A;
+    color: #E5E5E5;
+}
+
+.dark-theme-form button:hover {
     background: #252525;
 }
 
@@ -355,7 +472,7 @@ section {
         flex-direction: row;
         gap: 0.8rem;
         font-size: 1rem;
-        margin-left: 1rem;
+        margin-right: 2rem;
     }
 
     nav ul li {
@@ -399,6 +516,28 @@ section {
 @media screen and (min-width: 800px) {
     header {
         padding: 0 5rem;
+    }
+
+    .contact {
+        margin: 0 2rem;
+    }
+
+    .contact-wrapper {
+        flex-direction: row;
+        margin: 0 9rem;
+    }
+
+    .contact-links {
+        width: 20rem;
+        text-align: center;
+    }
+
+    .contact-links-wrapper {
+        flex-direction: row;
+    }
+
+    .contact-links-wrapper div {
+        width: 100%;
     }
 }
 
