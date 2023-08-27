@@ -6,11 +6,11 @@ const hero = document.querySelector('.hero');
 const sections = document.querySelectorAll('section');
 
 const navToggle = () => {
-    nav.classList.toggle('hide-nav');
-    navButton.classList.toggle('cross');
-
-    // BUG: changes on full screen
-    sections.forEach(section => section.classList.toggle('section-opacity'));
+    if (window.innerWidth < 520) {
+        nav.classList.toggle('hide-nav');
+        navButton.classList.toggle('cross');
+        sections.forEach(section => section.classList.toggle('section-opacity'));
+    }
 }
 
 navButton.addEventListener('click', navToggle);
@@ -43,6 +43,8 @@ const header = document.querySelector('header');
 const heroImage = document.querySelector('.hero-wrapper img');
 const separators = document.querySelectorAll('.separator');
 const projectCards = document.querySelectorAll('.project-card');
+const personalEmail = document.querySelector('.personal-email');
+const contactLinksWrapper = document.querySelector('.contact-links-wrapper');
 
 themeButtons.forEach(themeButton => {
     themeButton.addEventListener('click', () => {
@@ -50,6 +52,9 @@ themeButtons.forEach(themeButton => {
 
         header.classList.toggle('dark-theme-header');
         heroImage.classList.toggle('dark-theme-image');
+        personalEmail.classList.toggle('dark-theme-email');
+        contactLinksWrapper.classList.toggle('dark-theme-contact-links-wrapper');
+        form.classList.toggle('dark-theme-form');
 
         projectCards.forEach(projectCard => projectCard.classList.toggle('dark-theme-project-card'));
         links.forEach(link => link.classList.toggle('dark-theme-link'));
@@ -66,4 +71,26 @@ themeButtons.forEach(themeButton => {
     })
 })
 
+// Contact form stuff
+const form = document.getElementById('form');
 
+form.addEventListener('submit', event => {
+    event.preventDefault();
+
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const message = document.getElementById('message');
+
+    const data = { 
+        name: name.value,
+        email: email.value,
+        message: message.value 
+    };
+
+    // TODO: Send mail
+    console.log(data);
+
+    name.value = '';
+    email.value = '';
+    message.value = '';
+})
