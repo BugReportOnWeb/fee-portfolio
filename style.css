@@ -307,6 +307,65 @@ section {
     background: #252525;
 }
 
+.resume {
+    height: 100vh;
+    margin: 0 2rem 5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resume-wrapper {
+    width: 55rem;
+    padding: 2rem;
+    gap: 3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    text-align: center;
+}
+
+.resume-wrapper img {
+    width: 20rem;
+    height: auto;
+}
+
+.resume-wrapper-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.resume-wrapper-text h1 {
+    font-size: 1.5rem;
+}
+
+.resume-wrapper-text a {
+    text-decoration: none;
+    color: #1A1A1A;
+    padding: 1rem 1.5rem;
+    border: 1px solid #AAAAAA;
+    border-radius: 10px;
+    transition: background 300ms;
+    cursor: pointer;
+    text-align: center;
+}
+
+.resume-wrapper-text a:hover {
+    background: #D8D8D8;
+}
+
+.dark-theme-resume-wrapper-text a:hover {
+    background: #252525;
+}
+
+.dark-theme-resume-wrapper-text a {
+    color: #E5E5E5;
+}
+
 .contact {
     height: 100vh;
     margin: 0 2rem 5rem;
@@ -506,6 +565,8 @@ form button:hover {
     .hero-wrapper {
         flex-direction: row;
         text-align: start;
+        gap: 7rem;
+        width: 60rem;
     }
 
     .hero-wrapper img {
@@ -539,6 +600,20 @@ form button:hover {
     .contact-links-wrapper div {
         width: 100%;
     }
+
+    .resume-wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 60rem;
+    }
+
+    .resume-wrapper-text h1 {
+        font-size: 2rem;
+    }
+
+    .resume-wrapper img {
+        width: 30rem;
+    }
 }
 
 @media screen and (min-width: 850px) {
@@ -549,6 +624,10 @@ form button:hover {
     .projects {
         margin: 0;
     }
+
+    .resume {
+        margin-top: 5rem;
+    } 
 }
 
 @media screen and (min-width: 930px) {
@@ -560,5 +639,13 @@ form button:hover {
 @media screen and (min-width: 1000px) {
     header {
         padding: 0 10rem;
+    }
+
+
+}
+
+@media screen and (min-width: 1100px {
+    .resume {
+        margin-top: 0;
     }
 }
