@@ -45,6 +45,7 @@ const separators = document.querySelectorAll('.separator');
 const projectCards = document.querySelectorAll('.project-card');
 const personalEmail = document.querySelector('.personal-email');
 const contactLinksWrapper = document.querySelector('.contact-links-wrapper');
+const resumeWrapperText = document.querySelector('.resume-wrapper-text');
 
 themeButtons.forEach(themeButton => {
     themeButton.addEventListener('click', () => {
@@ -55,6 +56,7 @@ themeButtons.forEach(themeButton => {
         personalEmail.classList.toggle('dark-theme-email');
         contactLinksWrapper.classList.toggle('dark-theme-contact-links-wrapper');
         form.classList.toggle('dark-theme-form');
+        resumeWrapperText.classList.toggle('dark-theme-resume-wrapper-text');
 
         projectCards.forEach(projectCard => projectCard.classList.toggle('dark-theme-project-card'));
         links.forEach(link => link.classList.toggle('dark-theme-link'));
