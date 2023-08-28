@@ -546,8 +546,21 @@ form button:hover {
         border-radius: 0;
     }
 
-    nav ul li a:hover,
+    nav ul li a {
+        color: #555555;
+    }
+
+    nav ul li a:hover {
+        color: #000000;
+        background: transparent;
+    }
+
+    nav ul li .dark-theme-link {
+        color: #BFBFBF;
+    }
+
     nav ul li .dark-theme-link:hover {
+        color: #ffffff;
         background: transparent;
     }
 }
