@@ -490,6 +490,37 @@ form button:hover {
     background: #252525;
 }
 
+footer {
+    padding: 1rem;
+    width: 100%;
+    transition: opacity 300ms ease-in-out;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+footer > * {
+    font-weight: 300;
+    font-size: 0.8rem;
+}
+
+footer a {
+    color: #1A1A1A;
+}
+
+.dark-theme-footer a {
+    color: #E5E5E5;
+}
+
 @media screen and (min-width: 520px) {
     .nav-button {
         display: none;
@@ -571,6 +602,13 @@ form button:hover {
     nav ul li .dark-theme-link:hover {
         color: #ffffff;
         background: transparent;
+    }
+
+    .footer-wrapper {
+        width: 80%;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
     }
 }
 
