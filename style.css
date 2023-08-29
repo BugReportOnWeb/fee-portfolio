@@ -395,6 +395,11 @@ section {
     flex-direction: column;
 }
 
+.contact-links-wrapper a {
+    text-decoration: none;
+    color: #1A1A1A;
+}
+
 .contact-links-wrapper div {
     padding: 1rem 1.5rem;
     border: 1px solid #CCCCCC;
@@ -406,6 +411,10 @@ section {
 
 .contact-links-wrapper div:hover {
     background: #D8D8D8;
+}
+
+.dark-theme-contact-links-wrapper a {
+    color: #E5E5E5;
 }
 
 .dark-theme-contact-links-wrapper div:hover {
