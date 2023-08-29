@@ -4,12 +4,14 @@ const navButton = document.getElementById('nav-button');
 const navLinks = document.querySelectorAll('.nav-link');
 const hero = document.querySelector('.hero');
 const sections = document.querySelectorAll('section');
+const footer = document.getElementById('footer');
 
 const navToggle = () => {
     if (window.innerWidth < 520) {
         nav.classList.toggle('hide-nav');
         navButton.classList.toggle('cross');
         sections.forEach(section => section.classList.toggle('section-opacity'));
+        footer.classList.toggle('section-opacity');
     }
 }
 
